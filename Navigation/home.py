@@ -23,7 +23,7 @@ def test():
 
     Select_Country=col1.selectbox("Select Country",Whole_Data.groupby('location',as_index=False).last()['location'],index=211)
 
-    col2.text("In {} Stringency index is : {}".format(Select_Country,Whole_Data[Whole_Data['location']==Select_Country]['stringency_index'].max()))
+   # col2.text("In {} Stringency index is : {}".format(Select_Country,Whole_Data[Whole_Data['location']==Select_Country]['stringency_index'].max()))
 
     @st.cache
     def new_cases():
