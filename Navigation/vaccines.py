@@ -17,5 +17,5 @@ def test():
 
     @st.cache
     def vaccine_map():
-        return px.scatter_geo(data_frame=a,locations='iso_code',color='vaccine',hover_data=['location'])
+        return px.scatter_geo(data_frame=a,locations='iso_code',color='vaccine',hover_data=['location','vaccine'])
     st.plotly_chart(vaccine_map())
