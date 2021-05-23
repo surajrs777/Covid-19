@@ -10,7 +10,7 @@ a['vaccine']=a['vaccine'].apply(lambda x : x.strip())
 a=a.groupby(by=['vaccine','location','iso_code'],as_index=False)['source_website'].count()
 
 def test():
-    st.write("Vaccine Page")
+    st.title("Vaccines")
     #vaccine_selected=st.selectbox("Select Vaccine",a['vaccine'].value_counts().index,index=0)
     st.dataframe(data=a.groupby(by='vaccine',as_index=False)['location'].count().rename(columns={'location':'Countries Using'}))
 
